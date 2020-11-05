@@ -2,19 +2,17 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+    FpsCounter.update();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    ofDrawCircle(200,200,50);
-
-    cout << FpsCounter.getFps() << endl;
+    ofDrawCircle(ofGetWidth()/2 -25,ofGetHeight()/2 -25,50);
+    ofDrawBitmapStringHighlight("fps " + to_string(FpsCounter.getFps()), 25, 25);
 }
 
 //--------------------------------------------------------------
